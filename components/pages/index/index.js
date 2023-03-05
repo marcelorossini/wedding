@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import { ReactSVG } from "react-svg";
 import {
   Background,
@@ -57,6 +58,11 @@ export default function Home() {
   });
   return (
     <>
+      <Head>
+        <title>
+          MARCELO E ARYABE - SAVE THE DATE
+        </title>
+      </Head>
       <Background id="back" />
       <Wrapper>
         <Logo>
