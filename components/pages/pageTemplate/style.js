@@ -47,7 +47,10 @@ export const Main = styled.div`
     text-align: center;
   }
   .mapouter {
-    height: 40vh;
+    height: 30vh;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.2);
   }
   a {
     width: 100%;
@@ -58,5 +61,7 @@ export const Main = styled.div`
     padding: 10px;
     font-size: 1.2em;
     color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.2);
   }
 `;

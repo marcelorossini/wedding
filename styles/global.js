@@ -2,7 +2,7 @@ import { createGlobalStyle, keyframes } from "styled-components";
 
 export default createGlobalStyle`
     @font-face {
-    font-family: "Refira Asri";
+    font-family: "Refira Asri Regular";
     src: 
         url("./assets/fonts/Refira Asri/Refira Asri - Script.otf") format("truetype"),
         url("./assets/fonts/Refira Asri/Refira Asri - Script.ttf") format("truetype"),

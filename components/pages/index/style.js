@@ -19,6 +19,7 @@ export const Background = styled.div`
     url("./assets/background.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
+  box-shadow: inset 0px 82px 141px -88px rgba(0,0,0,0.2);
 `;
 
 export const Wrapper = styled.div`
@@ -45,8 +46,9 @@ export const CountdownBox = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr;
   background: #ffffff;
-  border-radius: 2px;
+  border-radius: 4px;
   overflow: hidden;
+  box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.2);
 `;
 
 export const CountdownItem = styled.div`
