@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  height: 200px;
   padding: var(--padding-default);
   text-align: center;
   font-family: "TT Hoves";
@@ -30,4 +29,10 @@ export const Icon = styled.div`
   svg {
     height: ${({ size }) => size};
   }
+`;
+
+export const Logo = styled.div`
+  width: 100%;
+  //max-width: 250px;
+  color: var(--color-primary);
 `;

@@ -1,10 +1,13 @@
-import { Wrapper, Social, Icon } from "./style";
+import { Wrapper, Social, Icon, Logo } from "./style";
 import { ReactSVG } from "react-svg";
 import Link from "next/link";
 
 export default function Footer() {
   return (
     <Wrapper>
+      <Logo>
+        <ReactSVG id="logo" src="../assets/logo-c.svg" />
+      </Logo>      
       Desenvolvido por Plim Soluções Criativas (14) 99181-4270
       <Social>
         <Icon size="20px">

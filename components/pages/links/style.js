@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   background: var(--color-primary);
   padding: var(--padding-default);
-
+  
   h2 {
     color: #ffffff;
     text-align: center;
@@ -30,21 +30,23 @@ export const Button = styled.div`
   gap: 10px;
   padding: 5px;
   color: #ffffff;
-  margin-bottom: var(--padding-default);
+  margin-bottom: var(--padding-default);  
   svg {
     height: 2.5em;
     color: #ffffff;
   }
+  a {
+    display: contents;
+  }
   span {
-    font-size: 1em;
+    font-size: .9em;
     height: 2.2em;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  a {
-    border: 1px solid red;
-    display: contents;
+    font-family: 'TT Hoves' !important;    
+    text-transform: uppercase;
+    line-height: 1.2em;
   }
   cursor: pointer;
   transition: .3s all;

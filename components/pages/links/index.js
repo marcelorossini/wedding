@@ -14,7 +14,7 @@ export default function Links() {
             <span>
               Localização
               <br />
-              Cerimonia
+              Cerimônia
             </span>
           </Link>
         </Button>
@@ -41,7 +41,7 @@ export default function Links() {
           <Link href="dicas-trajes">
             <ReactSVG src="../assets/icons/suit.svg" />
             <span>
-              Dicas
+              Dicas de
               <br />
               Trajes
             </span>
@@ -51,7 +51,7 @@ export default function Links() {
           <Link href="https://agromonges.com/">
             <ReactSVG src="../assets/icons/church.svg" />
             <span>
-              Site
+              Site do
               <br />
               mosteiro
             </span>
@@ -61,9 +61,9 @@ export default function Links() {
           <Link href="https://chacarasantamaria.wixsite.com/torrinha">
             <ReactSVG src="../assets/icons/farm.svg" />
             <span>
-              Site
+              Site da
               <br />
-              Chacara
+              Chácara
             </span>
           </Link>
         </Button>

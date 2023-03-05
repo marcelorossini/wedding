@@ -8,7 +8,7 @@ export default function Home() {
 
         <p>
           Criamos esse site para ajudá-los com algumas informações referentes ao
-          grande dia. Por aqui vocês encontrarão mais informações acerca da
+          grande dia. Por aqui, vocês encontrarão mais informações acerca da
           localização, dicas e muito mais.
           <br />
           <br />
@@ -19,7 +19,7 @@ export default function Home() {
           <br />
           Tudo será perfeitamente feito conforme a nossa personalidade, gostos e
           sonhos. Nossa intenção é que o dia seja leve, feliz, abençoado e
-          repleto de pessoas que amamos, por isso, sua presença será muito
+          repleto de pessoas que amamos. Por isso, sua presença será muito
           especial!
           <br />
           <br />

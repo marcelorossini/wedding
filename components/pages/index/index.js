@@ -10,6 +10,7 @@ import {
   CountdownBox,
   CountdownItem,
   CountdownLabel,
+  LoadingStyled
 } from "./style";
 
 import Welcome from "@components/pages/welcome";
@@ -59,9 +60,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          MARCELO E ARYABE - SAVE THE DATE
-        </title>
+        <title>MARCELO E ARYANE - SAVE THE DATE</title>
       </Head>
       <Background id="back" />
       <Wrapper>
@@ -70,7 +69,9 @@ export default function Home() {
         </Logo>
         {days && (
           <CountdownBox>
-            <CountdownItem type="title"><ReactSVG src="../assets/icons/calendar.svg" /> FALTAM EXATAMENTE</CountdownItem>
+            <CountdownItem type="title">
+              <ReactSVG src="../assets/icons/calendar.svg" /> FALTAM EXATAMENTE
+            </CountdownItem>
             <CountdownItem type="day">
               {days}
               <CountdownLabel>DIAS</CountdownLabel>
@@ -93,6 +94,17 @@ export default function Home() {
       <Welcome />
       <Links />
       <Footer />
+      <Loading />
     </>
   );
 }
+
+const Loading = () => {
+  return (
+    <LoadingStyled>
+      <Logo>
+        <ReactSVG id="logo" src="../assets/logo-c.svg" />
+      </Logo>
+    </LoadingStyled>
+  );
+};

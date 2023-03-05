@@ -37,9 +37,6 @@ export default class MyDocument extends Document {
           <link rel={"preconnect"} href={"https://fonts.googleapis.com"} />
           <link rel={"preconnect"} href={"https://fonts.gstatic.com"} />        
           <link rel="manifest" href="/manifest.json" />
-          <meta name="msapplication-TileColor" content="#607E48" />
-          <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-          <meta name="theme-color" content="#607E48" />
         </Head>
         <body>
           <Main />

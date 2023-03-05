@@ -18,6 +18,7 @@ export const BackButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   svg {
     width: 20px;
   }
@@ -34,6 +35,11 @@ export const Header = styled.div`
   display: flex;
   color: var(--color-primary);
   text-align: center;
+  span {
+    font-family: "TT Hoves" !important;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 `;
 
 export const Main = styled.div`

@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const fadeOut = keyframes`
+  0% {
+      opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+`;
 
 export const Background = styled.div`
   position: absolute;
@@ -36,6 +46,23 @@ export const Logo = styled.div`
   width: 100%;
   //max-width: 250px;
   color: var(--color-primary);
+`;
+
+export const LoadingStyled = styled.div`
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  background: url("./assets/texture.jpg") no-repeat;
+  background-size: cover;
+  background-position: top center;
+  animation: ${fadeOut} 3s forwards;
 `;
 
 
