@@ -1,6 +1,24 @@
 import { createGlobalStyle, keyframes } from "styled-components";
 
 export default createGlobalStyle`
+    @font-face {
+    font-family: 'Refira Asri';
+    src: 
+        url("assets/fonts/Refira Asri/Refira Asri - Script.otf") format('truetype'),
+        url("assets/fonts/Refira Asri/Refira Asri - Script.ttf") format('truetype'),
+        url("assets/fonts/Refira Asri/RefiraAsri-Regular.otf") format('truetype');
+    }
+    @font-face {
+        font-family: 'TT Hoves';
+        src: url('TTHoves-Regular.eot');
+        src: local('TT Hoves Regular'), local('TTHoves-Regular'),
+            url('TTHoves-Regular.eot?#iefix') format('embedded-opentype'),
+            url('TTHoves-Regular.woff2') format('woff2'),
+            url('TTHoves-Regular.woff') format('woff'),
+            url('TTHoves-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
     :root {
     --color-primary: rgba(96, 126, 72,1);
     --color-primary-90: rgba(96, 126, 72,.9);
