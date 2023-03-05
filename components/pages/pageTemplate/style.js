@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: var(--padding-default);
-  background: url("assets/texture.jpg") no-repeat;
+  background: url("./assets/texture.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
 `;

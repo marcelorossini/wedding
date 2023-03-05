@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Links() {
   return (
     <Wrapper>
-      <h2>LINKS ÚTEIS</h2>
+      <h2>SAIBA MAIS</h2>
 
       <ButtonList>
         <Button>

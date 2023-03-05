@@ -2,20 +2,20 @@ import { createGlobalStyle, keyframes } from "styled-components";
 
 export default createGlobalStyle`
     @font-face {
-    font-family: 'Refira Asri';
+    font-family: "Refira Asri";
     src: 
-        url("assets/fonts/Refira Asri/Refira Asri - Script.otf") format('truetype'),
-        url("assets/fonts/Refira Asri/Refira Asri - Script.ttf") format('truetype'),
-        url("assets/fonts/Refira Asri/RefiraAsri-Regular.otf") format('truetype');
+        url("./assets/fonts/Refira Asri/Refira Asri - Script.otf") format("truetype"),
+        url("./assets/fonts/Refira Asri/Refira Asri - Script.ttf") format("truetype"),
+        url("./assets/fonts/Refira Asri/RefiraAsri-Regular.otf") format("truetype");
     }
     @font-face {
-        font-family: 'TT Hoves';
-        src: url('assets/fonts/TTHoves/TTHoves-Regular.eot');
-        src: local('assets/fonts/TTHoves/TT Hoves Regular'), local('assets/fonts/TTHoves/TTHoves-Regular'),
-            url('assets/fonts/TTHoves/TTHoves-Regular.eot?#iefix') format('embedded-opentype'),
-            url('assets/fonts/TTHoves/TTHoves-Regular.woff2') format('woff2'),
-            url('assets/fonts/TTHoves/TTHoves-Regular.woff') format('woff'),
-            url('assets/fonts/TTHoves/TTHoves-Regular.ttf') format('truetype');
+        font-family: "TT Hoves";
+        src: url("./assets/fonts/TTHoves/TTHoves-Regular.eot");
+        src: local("./assets/fonts/TTHoves/TT Hoves Regular"), local("./assets/fonts/TTHoves/TTHoves-Regular"),
+            url("./assets/fonts/TTHoves/TTHoves-Regular.eot?#iefix") format("embedded-opentype"),
+            url("./assets/fonts/TTHoves/TTHoves-Regular.woff2") format("woff2"),
+            url("./assets/fonts/TTHoves/TTHoves-Regular.woff") format("woff"),
+            url("./assets/fonts/TTHoves/TTHoves-Regular.ttf") format("truetype");
     }
     :root {
     --color-primary: rgba(96, 126, 72,1);

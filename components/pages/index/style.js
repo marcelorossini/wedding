@@ -16,7 +16,7 @@ export const Background = styled.div`
       rgba(253, 251, 249, 1) 50%,
       rgba(255, 255, 255, 0.1) 100%
     ),
-    url("assets/background.jpg") no-repeat;
+    url("./assets/background.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
 `;
