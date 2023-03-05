@@ -30,6 +30,7 @@ export const Button = styled.div`
   gap: 10px;
   padding: 5px;
   color: #ffffff;
+  margin-bottom: var(--padding-default);
   svg {
     height: 2.5em;
     color: #ffffff;

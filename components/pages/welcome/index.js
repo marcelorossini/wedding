@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <Wrapper>
       <WelcomeStyled>
-        <h2>SEJAM BEM VINDOS</h2>
+        <h2>SEJAM BEM-VINDOS</h2>
 
         <p>
           Criamos esse site para ajudá-los com algumas informações referentes ao

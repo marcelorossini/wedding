@@ -45,4 +45,14 @@ export const Main = styled.div`
   .mapouter {
     height: 40vh;
   }
+  a {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+    background: var(--color-primary);
+    padding: 10px;
+    font-size: 1.2em;
+    color: #ffffff;
+  }
 `;

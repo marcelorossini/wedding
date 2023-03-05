@@ -10,12 +10,12 @@ export default createGlobalStyle`
     }
     @font-face {
         font-family: 'TT Hoves';
-        src: url('TTHoves-Regular.eot');
-        src: local('TT Hoves Regular'), local('TTHoves-Regular'),
-            url('TTHoves-Regular.eot?#iefix') format('embedded-opentype'),
-            url('TTHoves-Regular.woff2') format('woff2'),
-            url('TTHoves-Regular.woff') format('woff'),
-            url('TTHoves-Regular.ttf') format('truetype');
+        src: url('assets/fonts/TTHoves/TTHoves-Regular.eot');
+        src: local('assets/fonts/TTHoves/TT Hoves Regular'), local('assets/fonts/TTHoves/TTHoves-Regular'),
+            url('assets/fonts/TTHoves/TTHoves-Regular.eot?#iefix') format('embedded-opentype'),
+            url('assets/fonts/TTHoves/TTHoves-Regular.woff2') format('woff2'),
+            url('assets/fonts/TTHoves/TTHoves-Regular.woff') format('woff'),
+            url('assets/fonts/TTHoves/TTHoves-Regular.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
