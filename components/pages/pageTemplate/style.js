@@ -2,12 +2,16 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: relative;
+  min-height: 100vh;
   z-index: 100;
   padding: var(--padding-default) calc(var(--padding-default) * 2);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--padding-default);
+  background: url("assets/texture.jpg") no-repeat;
+  background-size: cover;
+  background-position: top center;
 `;
 
 export const BackButton = styled.div`

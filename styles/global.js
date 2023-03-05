@@ -16,8 +16,6 @@ export default createGlobalStyle`
             url('assets/fonts/TTHoves/TTHoves-Regular.woff2') format('woff2'),
             url('assets/fonts/TTHoves/TTHoves-Regular.woff') format('woff'),
             url('assets/fonts/TTHoves/TTHoves-Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
     }
     :root {
     --color-primary: rgba(96, 126, 72,1);
