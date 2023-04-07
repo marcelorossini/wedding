@@ -15,6 +15,15 @@ export default createGlobalStyle`
             url("./assets/fonts/TTHoves/TTHoves-Regular.woff") format("woff"),
             url("./assets/fonts/TTHoves/TTHoves-Regular.ttf") format("truetype");
     }
+    @font-face {
+        font-family: "TT Hoves";
+        src: url("./assets/fonts/TTHoves/TTHoves-Regular.eot");
+        src: local("./assets/fonts/TTHoves/TT Hoves Regular"), local("./assets/fonts/TTHoves/TTHoves-Regular"),
+            url("./assets/fonts/TTHoves/TTHoves-Regular.eot?#iefix") format("embedded-opentype"),
+            url("./assets/fonts/TTHoves/TTHoves-Regular.woff2") format("woff2"),
+            url("./assets/fonts/TTHoves/TTHoves-Regular.woff") format("woff"),
+            url("./assets/fonts/TTHoves/TTHoves-Regular.ttf") format("truetype");
+    }
     :root {
     --color-primary: rgba(96, 126, 72,1);
     --color-primary-90: rgba(96, 126, 72,.9);
@@ -57,5 +66,9 @@ export default createGlobalStyle`
     }
     p {
     display: inline-block;
+    }
+
+    .remove-white {
+        mix-blend-mode: multiply;
     }
 `;
