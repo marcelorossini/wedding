@@ -4,6 +4,9 @@ export const fadeOut = keyframes`
   0% {
       opacity: 1;
   }
+  50% {
+      opacity: 1;
+  }  
   100% {
     opacity: 0;
     display: none;
@@ -49,8 +52,8 @@ export const Logo = styled.div`
 `;
 
 export const LoadingStyled = styled.div`
-  position: absolute;
-  z-index: 1000;
+  position: fixed;
+  z-index: 100000;
   top: 0;
   left: 0;
   width: 100vw;
@@ -76,6 +79,7 @@ export const CountdownBox = styled.div`
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.2);
+  height: 120px;
 `;
 
 export const CountdownItem = styled.div`

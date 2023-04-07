@@ -9,7 +9,7 @@ export default function Home() {
         mudaremos para nosso novo lar, por isso, separamos algumas sugestões de
         presentes que farão parte do nosso enxoval.
       </p>
-      <Link href="https://listas.casasbahia.com.br/aryaneemarcelo">
+      <Link href="https://www.finalfeliz.de/aryaneemarcelo">
         <button>ACESSAR</button>
       </Link>
     </PageTemplate>

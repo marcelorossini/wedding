@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   background: url("./assets/texture.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
+  background-attachment: fixed;
 `;
 
 export const BackButton = styled.div`
@@ -52,6 +53,11 @@ export const Main = styled.div`
     font-family: "TT Hoves";
     text-align: center;
   }
+  h1, h2, h3, h4, h5, h6 { 
+    color: var(--color-primary);
+    font-family: "TT Hoves";
+    text-transform: uppercase;
+  }
   .mapouter {
     height: 30vh;
     border-radius: 4px;
@@ -69,5 +75,8 @@ export const Main = styled.div`
     color: #ffffff;
     border-radius: 4px;
     box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.2);
+  }
+  img {
+    width: 100%;
   }
 `;

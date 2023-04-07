@@ -10,7 +10,7 @@ import {
   CountdownBox,
   CountdownItem,
   CountdownLabel,
-  LoadingStyled
+  LoadingStyled,
 } from "./style";
 
 import Welcome from "@components/pages/welcome";
@@ -22,6 +22,7 @@ export default function Home() {
   const [hours, setHours] = useState();
   const [minutes, setMinutes] = useState();
   const [seconds, setSeconds] = useState();
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     var countDownDate = new Date("Dec 9, 2023 16:00:00").getTime();
 
@@ -57,6 +58,12 @@ export default function Home() {
       );
     }, 1000);
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    },3000)
+  }, [])
   return (
     <>
       <Head>
@@ -67,34 +74,37 @@ export default function Home() {
         <Logo>
           <ReactSVG id="logo" src="../assets/logo-text.svg" />
         </Logo>
-        {days && (
-          <CountdownBox>
-            <CountdownItem type="title">
-              <ReactSVG src="../assets/icons/calendar.svg" /> FALTAM EXATAMENTE
-            </CountdownItem>
-            <CountdownItem type="day">
-              {days}
-              <CountdownLabel>DIAS</CountdownLabel>
-            </CountdownItem>
-            <CountdownItem type="hour">
-              {hours}
-              <CountdownLabel>HORAS</CountdownLabel>
-            </CountdownItem>
-            <CountdownItem type="minute">
-              {minutes}
-              <CountdownLabel>MINUTOS</CountdownLabel>
-            </CountdownItem>
-            <CountdownItem type="second">
-              {seconds}
-              <CountdownLabel>SEG</CountdownLabel>
-            </CountdownItem>
-          </CountdownBox>
-        )}
+        <CountdownBox>
+          {days && (
+            <>
+              <CountdownItem type="title">
+                <ReactSVG src="../assets/icons/calendar.svg" /> FALTAM
+                EXATAMENTE
+              </CountdownItem>
+              <CountdownItem type="day">
+                {days}
+                <CountdownLabel>DIAS</CountdownLabel>
+              </CountdownItem>
+              <CountdownItem type="hour">
+                {hours}
+                <CountdownLabel>HORAS</CountdownLabel>
+              </CountdownItem>
+              <CountdownItem type="minute">
+                {minutes}
+                <CountdownLabel>MINUTOS</CountdownLabel>
+              </CountdownItem>
+              <CountdownItem type="second">
+                {seconds}
+                <CountdownLabel>SEG</CountdownLabel>
+              </CountdownItem>
+            </>
+          )}
+        </CountdownBox>
       </Wrapper>
       <Welcome />
       <Links />
       <Footer />
-      <Loading />
+      {loading && <Loading />}      
     </>
   );
 }

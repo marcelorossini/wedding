@@ -4,6 +4,22 @@ import Link from "next/link";
 export default function Home() {
   return (
     <PageTemplate title="Trajes">
+      <h2>Convidados</h2>
+      <p>Traje: passeio completo, em cores claras.</p>
+      <img src="../assets/photos/convidados.jpg" />
+      <p>
+        Para mulheres, não é recomendado o uso de vestidos na cor verde (cor das
+        madrinhas) e branco (cor da noiva).
+      </p>
+      <img src="../assets/photos/convidadas.jpg" />
+      <p>Ideias de cores</p>
+      <img src="../assets/photos/paleta.jpg" className="remove-white" />
+      <h2>Madrinhas</h2>
+      <img src="../assets/photos/madrinhas.jpg" />
+      <h2>Padrinhos</h2>
+      <img src="../assets/photos/padrinhos.jpg" />
+
+      <h2>Sugestão de loja</h2>
       <p>
         Alugamos nossos trajes na Francis Noivas e Festas e gostamos muito dos
         valores e do atendimento, então fica a sugestão para quem optar pelo
