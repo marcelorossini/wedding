@@ -172,10 +172,13 @@ export const Button = styled.button`
     width: fit-content;
   }
 
-  svg {
-    height: 1.2em;
-    width: fit-content;
-    color: #ffffff;
+  .icon {
+    width: 20px;
+    svg {
+      height: 1.2em;
+      width: fit-content;
+      color: #ffffff;
+    }
   }
 `;
 

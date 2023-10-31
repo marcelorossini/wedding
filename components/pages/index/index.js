@@ -113,7 +113,9 @@ export default function Home() {
         </CountdownBox>
 
         <Button type="button" onClick={() => setShowPresenceList(true)}>
-          <ReactSVG src="../assets/icons/list.svg" />
+          <div className="icon">
+            <ReactSVG src="../assets/icons/list.svg" />
+          </div>
           CONFIRME SUA PRESENÇA
         </Button>
         <IframeGoogle
