@@ -175,8 +175,8 @@ export const Button = styled.button`
   .icon {
     width: 20px;
     svg {
-      height: 1.2em;
-      width: fit-content;
+      width: 20px;
+      height: 20px;
       color: #ffffff;
     }
   }
