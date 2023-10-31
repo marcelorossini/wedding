@@ -32,17 +32,25 @@ export const Background = styled.div`
     url("./assets/background.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
-  box-shadow: inset 0px 82px 141px -88px rgba(0,0,0,0.2);
+  box-shadow: inset 0px 82px 141px -88px rgba(0, 0, 0, 0.2);
 `;
 
 export const Wrapper = styled.div`
   position: relative;
   width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
   min-height: 100%;
   z-index: 100%;
-  padding: calc(50vh - 5em) var(--padding-default) var(--padding-default) var(--padding-default);
+  padding: calc(50vh - 5em) var(--padding-default) var(--padding-default)
+    var(--padding-default);
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 600px) {
+    padding: calc(30vh - 5em) var(--padding-default) var(--padding-default)
+      var(--padding-default);
+  }
 `;
 
 export const Logo = styled.div`
@@ -66,8 +74,18 @@ export const LoadingStyled = styled.div`
   background-size: cover;
   background-position: top center;
   animation: ${fadeOut} 3s forwards;
-`;
 
+  img {
+    width: 200%;
+    object-fit: cover;
+  }
+  @media (min-width: 600px) {
+    img {
+      width: initial;
+      height: 100%;
+    }
+  }
+`;
 
 export const CountdownBox = styled.div`
   width: 100%;
@@ -78,7 +96,7 @@ export const CountdownBox = styled.div`
   background: #ffffff;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 50px -15px rgba(0, 0, 0, 0.2);
   height: 120px;
 `;
 
@@ -135,4 +153,38 @@ export const CountdownItem = styled.div`
 
 export const CountdownLabel = styled.div`
   font-size: 0.8em;
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 20px;
+  margin: 30px auto auto auto;
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @media (min-width: 600px) {
+    width: fit-content;
+  }
+
+  svg {
+    height: 1.2em;
+    width: fit-content;
+    color: #ffffff;
+  }
+`;
+
+export const IframeGoogle = styled.iframe`
+  border: none;
+  overflow: hidden;
+  display: ${({ show }) => (!!show ? "block" : "none")};
+  height: 100vh;
+  @media (min-width: 600px) {
+    height: 550px;
+  }
 `;

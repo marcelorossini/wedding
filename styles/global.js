@@ -36,6 +36,7 @@ export default createGlobalStyle`
     --color-primary-20: rgba(96, 126, 72,.2);
     --color-primary-10: rgba(96, 126, 72,.1);
     --padding-default: 20px;
+    --max-width: 1200px;
     }   
     html, body {
     margin: 0;

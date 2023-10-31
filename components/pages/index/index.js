@@ -11,6 +11,7 @@ import {
   CountdownItem,
   CountdownLabel,
   LoadingStyled,
+  IframeGoogle,
 } from "./style";
 
 import Welcome from "@components/pages/welcome";
@@ -23,6 +24,8 @@ export default function Home() {
   const [minutes, setMinutes] = useState();
   const [seconds, setSeconds] = useState();
   const [loading, setLoading] = useState(true);
+  const [showPresenceList, setShowPresenceList] = useState(false);
+
   useEffect(() => {
     var countDownDate = new Date("Dec 9, 2023 16:00:00").getTime();
 
@@ -61,9 +64,17 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false)
-    },3000)
-  }, [])
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+  useEffect(() => {
+    if (!!showPresenceList) {
+      document
+        .querySelector("#lista-presenca-form")
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  }, [showPresenceList]);
   return (
     <>
       <Head>
@@ -100,11 +111,23 @@ export default function Home() {
             </>
           )}
         </CountdownBox>
+
+        <Button type="button" onClick={() => setShowPresenceList(true)}>
+          <ReactSVG src="../assets/icons/list.svg" />
+          CONFIRME SUA PRESENÇA
+        </Button>
+        <IframeGoogle
+          id="lista-presenca-form"
+          show={showPresenceList}
+          src="https://docs.google.com/forms/d/e/1FAIpQLSd-sfPF3ZPZy2B83HWHXaPtBygsdedMNbsA3xAQaxrMxdMDMg/viewform?embedded=true"
+        >
+          Carregando…
+        </IframeGoogle>
       </Wrapper>
       <Welcome />
       <Links />
       <Footer />
-      {loading && <Loading />}      
+      {loading && <Loading />}
     </>
   );
 }
@@ -112,9 +135,7 @@ export default function Home() {
 const Loading = () => {
   return (
     <LoadingStyled>
-      <Logo>
-        <ReactSVG id="logo" src="../assets/logo-c.svg" />
-      </Logo>
+      <img id="logo" src="/assets/aquarela.png" />
     </LoadingStyled>
   );
 };

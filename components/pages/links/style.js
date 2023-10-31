@@ -2,16 +2,21 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: var(--color-primary);
-  padding: var(--padding-default);
-  
-  h2 {
-    color: #ffffff;
-    text-align: center;
-  }
 
-  display: flex;
-  flex-direction: column;
-  gap: var(--padding-default);
+  & > div {
+    max-width: var(--max-width);
+    margin: 0 auto;    
+    padding: var(--padding-default);
+
+    h2 {
+      color: #ffffff;
+      text-align: center;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-default);
+  }
 `;
 
 export const ButtonList = styled.div`
@@ -30,7 +35,7 @@ export const Button = styled.div`
   gap: 10px;
   padding: 5px;
   color: #ffffff;
-  margin-bottom: var(--padding-default);  
+  margin-bottom: var(--padding-default);
   svg {
     height: 2.5em;
     color: #ffffff;
@@ -39,22 +44,22 @@ export const Button = styled.div`
     display: contents;
   }
   span {
-    font-size: .9em;
+    font-size: 0.9em;
     height: 2.2em;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'TT Hoves' !important;    
+    font-family: "TT Hoves" !important;
     text-transform: uppercase;
     line-height: 1.2em;
   }
   cursor: pointer;
-  transition: .3s all;
+  transition: 0.3s all;
   &:hover {
     background: #ffffff;
     color: var(--color-primary);
     border-radius: 4px;
-    box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 50px -15px rgba(0, 0, 0, 0.2);
     svg {
       color: var(--color-primary);
     }

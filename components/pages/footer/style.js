@@ -11,6 +11,8 @@ export const Wrapper = styled.div`
   justify-content: center;
   color: var(--color-primary-50);
   gap: var(--padding-default);
+  max-width: calc(var(--max-width) / 2);
+  margin: 0 auto;    
 `;
 
 export const Social = styled.div`
