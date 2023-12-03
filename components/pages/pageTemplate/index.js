@@ -3,6 +3,7 @@ import { ReactSVG } from "react-svg";
 import Router from "next/router";
 import Head from "next/head";
 import Footer from "../footer";
+import Links from "@components/pages/links";
 
 export default function PageTemplate(props) {
   const { children, title } = props;
@@ -12,7 +13,7 @@ export default function PageTemplate(props) {
         <title>{title}</title>
       </Head>
       <Wrapper>
-        <Logo>
+        <Logo onClick={() => Router.back()}>
           <ReactSVG id="logo" src="../assets/logo-text.svg" />
           <BackButton onClick={() => Router.back()}>
             <ReactSVG src="../assets/icons/back.svg" />
@@ -23,6 +24,7 @@ export default function PageTemplate(props) {
           <span>{title}</span>
         </Header>
         <Main>{children}</Main>
+        <Links />
         <Footer />
       </Wrapper>
     </>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   position: relative;
   min-height: 100vh;
+  width: 100%;  
   z-index: 100;
   padding: var(--padding-default) calc(var(--padding-default) * 2);
   display: flex;
@@ -27,7 +28,7 @@ export const BackButton = styled.div`
 
 export const Logo = styled.div`
   width: 100%;
-  //max-width: 250px;
+  max-width: 768px;
   color: var(--color-primary);
 `;
 
@@ -48,6 +49,9 @@ export const Main = styled.div`
   flex-direction: column;
   align-items: center;
   gap: var(--padding-default);
+  max-width: var(--max-width);
+  margin: o auto;  
+  padding-bottom: 100px;
 
   p {
     font-family: "TT Hoves";
@@ -58,7 +62,11 @@ export const Main = styled.div`
     font-family: "TT Hoves";
     text-transform: uppercase;
   }
+  .fullWidth {
+    width: 100%;
+  }
   .mapouter {
+    width: 100%;
     height: 30vh;
     border-radius: 4px;
     overflow: hidden;

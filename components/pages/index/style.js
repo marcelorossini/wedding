@@ -89,6 +89,11 @@ export const LoadingStyled = styled.div`
 
 export const CountdownBox = styled.div`
   width: 100%;
+  background: var(--color-primary-80);
+`;
+
+export const CountdownBoxDefault = styled.div`
+  height: 120px;
   display: grid;
   grid-template-areas: "title title title title" "day hour minute second";
   grid-template-columns: repeat(4, 1fr);
@@ -97,7 +102,6 @@ export const CountdownBox = styled.div`
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0px 0px 50px -15px rgba(0, 0, 0, 0.2);
-  height: 120px;
 `;
 
 export const CountdownItem = styled.div`
@@ -189,5 +193,25 @@ export const IframeGoogle = styled.iframe`
   height: 100vh;
   @media (min-width: 600px) {
     height: 550px;
+  }
+`;
+
+export const CountdownTextBox = styled.div`
+  min-height: 120px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  gap: 20px;
+
+  &,
+  & * {
+    font-family: "TT Hoves";
   }
 `;

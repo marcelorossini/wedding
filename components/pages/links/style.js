@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: var(--color-primary);
+  width: 100%;
 
   & > div {
+    width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;    
     padding: var(--padding-default);
@@ -44,6 +46,7 @@ export const Button = styled.div`
     display: contents;
   }
   span {
+    width: 100%;
     font-size: 0.9em;
     height: 2.2em;
     display: flex;

@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import { ReactSVG } from "react-svg";
+import dayjs from "dayjs";
+dayjs.locale("pt-BR");
+import Link from "next/link";
+
 import {
   Background,
   Wrapper,
@@ -8,10 +12,12 @@ import {
   ButtonList,
   Button,
   CountdownBox,
+  CountdownBoxDefault,
   CountdownItem,
   CountdownLabel,
   LoadingStyled,
   IframeGoogle,
+  CountdownTextBox,
 } from "./style";
 
 import Welcome from "@components/pages/welcome";
@@ -24,18 +30,27 @@ export default function Home() {
   const [minutes, setMinutes] = useState();
   const [seconds, setSeconds] = useState();
   const [loading, setLoading] = useState(true);
+  const [countdownStatus, setCountdownStatus] = useState(undefined);
   const [showPresenceList, setShowPresenceList] = useState(false);
 
   useEffect(() => {
-    var countDownDate = new Date("Dec 9, 2023 16:00:00").getTime();
+    var countDownDate = dayjs(`2023-12-09 16:00:00`);
 
     // Update the count down every 1 second
     var coutdownTimer = setInterval(() => {
       // Get today's date and time
-      var now = new Date().getTime();
+      var now = dayjs();
 
       // Find the distance between now and the count down date
       var distance = countDownDate - now;
+
+      //
+      if (countDownDate.format("YYYY-MM-DD") == now.format("YYYY-MM-DD")) {
+        setCountdownStatus("today");
+      } else if (countDownDate.diff(now) < 0) setCountdownStatus("after");
+      else {
+        setCountdownStatus("ok");
+      }
 
       if (distance < 0) {
         clearInterval(coutdownTimer);
@@ -86,30 +101,58 @@ export default function Home() {
           <ReactSVG id="logo" src="../assets/logo-text.svg" />
         </Logo>
         <CountdownBox>
-          {days && (
-            <>
-              <CountdownItem type="title">
-                <ReactSVG src="../assets/icons/calendar.svg" /> FALTAM
-                EXATAMENTE
-              </CountdownItem>
-              <CountdownItem type="day">
-                {days}
-                <CountdownLabel>DIAS</CountdownLabel>
-              </CountdownItem>
-              <CountdownItem type="hour">
-                {hours}
-                <CountdownLabel>HORAS</CountdownLabel>
-              </CountdownItem>
-              <CountdownItem type="minute">
-                {minutes}
-                <CountdownLabel>MINUTOS</CountdownLabel>
-              </CountdownItem>
-              <CountdownItem type="second">
-                {seconds}
-                <CountdownLabel>SEG</CountdownLabel>
-              </CountdownItem>
-            </>
-          )}
+          {(() => {
+            if (countdownStatus == "ok") {
+              return (
+                <CountdownBoxDefault>
+                  <CountdownItem type="title">
+                    <ReactSVG src="../assets/icons/calendar.svg" /> FALTAM
+                    EXATAMENTE
+                  </CountdownItem>
+                  <CountdownItem type="day">
+                    {days}
+                    <CountdownLabel>DIAS</CountdownLabel>
+                  </CountdownItem>
+                  <CountdownItem type="hour">
+                    {hours}
+                    <CountdownLabel>HORAS</CountdownLabel>
+                  </CountdownItem>
+                  <CountdownItem type="minute">
+                    {minutes}
+                    <CountdownLabel>MINUTOS</CountdownLabel>
+                  </CountdownItem>
+                  <CountdownItem type="second">
+                    {seconds}
+                    <CountdownLabel>SEG</CountdownLabel>
+                  </CountdownItem>
+                </CountdownBoxDefault>
+              );
+            } else if (countdownStatus == "today")
+              return (
+                <CountdownTextBox>
+                  <span>É HOJE ÀS 16:00!!!</span>
+                  <Link href="/cerimonia">
+                    <div>
+                      <u>
+                        CLIQUE AQUI PARA LOCALIZAÇÃO DA CERIMONIA
+                      </u>
+                    </div>
+                  </Link>
+                </CountdownTextBox>
+              );
+            else
+              return (
+                <CountdownTextBox>
+                  <span>
+                    Em breve, compartilharemos as fotos do nosso casamento!
+                  </span>
+                  <span>
+                    Estejam atentos para reviver conosco os momentos especiais e
+                    sorrisos que marcaram o nosso dia.
+                  </span>
+                </CountdownTextBox>
+              );
+          })()}
         </CountdownBox>
 
         <Button type="button" onClick={() => setShowPresenceList(true)}>
